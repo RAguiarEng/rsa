@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap: https://rsa.ia.br/sitemap.xml
