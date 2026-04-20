@@ -1,4 +1,10 @@
+# Impede que robôs acessem pastas de configuração ou scripts internos (ajuste conforme suas pastas)
 User-agent: *
+Disallow: /assets/js/
+Disallow: /admin/
+
+# Permite que todos os robôs rastreiem o restante do conteúdo
 Allow: /
 
+# Indica a localização do seu mapa do site para facilitar a indexação
 # Sitemap: https://rsa.ia.br/sitemap.xml
