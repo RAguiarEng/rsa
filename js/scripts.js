@@ -32,4 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // Fechar menu mobile ao clicar em um link
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const menuToggle = document.getElementById('navbarNav');
+    const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
+    
+    navLinks.forEach((l) => {
+        l.addEventListener('click', () => {
+            if (window.innerWidth < 992) {
+                bsCollapse.hide();
+            }
+        });
+    });
 });
