@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- URL Principal do Projeto -->
   <url>
-    <loc>https://raguiareng.github.io/rsa/</loc>
+    <loc>https://rsa.ia.br/</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Adicione URLs adicionais abaixo, se houver outras páginas HTML -->
-  <!-- 
+  <!-- Adicione URLs abaixo -->
+  
   <url>
-    <loc>https://raguiareng.github.io/rsa/outra-pagina.html</loc>
-    <lastmod>2026-04-20</lastmod>
+    <loc>https://raguiar.eng.br</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url> 
-  -->
+  
 </urlset>
