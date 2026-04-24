@@ -41,9 +41,9 @@ Orquestramos **Sistemas Agênticos** com o protocolo exclusivo **"Falha Segura" 
 
 | Plano | Duração Estimada | Foco Principal | Investimento |
 | :--- | :--- | :--- | :--- |
-| **Fluxo Ágil** | 15-30 Dias | Resolução de um único gargalo crítico. | A partir de R$ 1.500 |
-| **Assessoria RSA** | 3-4 Meses | Transformação digital com Agentes personalizados. | A partir de R$ 8.000 |
-| **Parceria RSA** | 12 Meses | Governança contínua e evolução tecnológica. | A partir de R$ 2.000/mês |
+| **Fluxo Ágil** | 15-30 Dias | Resolução de um único gargalo crítico. | A partir de R$ 3.500 |
+| **Assessoria RSA** | 3-4 Meses | Transformação digital com Agentes personalizados. | A partir de R$ 15.000 |
+| **Parceria RSA** | 12 Meses | Governança contínua e evolução tecnológica. | A partir de R$ 4.500/mês |
 | **Enterprise** | Sob Consulta | Projetos complexos e curadoria de dados proprietários. | Sob Consulta |
 
 ---

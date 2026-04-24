@@ -242,6 +242,34 @@ h4,
     font-size: 0.95rem;
 }
 
+.method-link {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--rsa-transition);
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.method-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--rsa-accent);
+    transition: var(--rsa-transition);
+}
+
+.method-link:hover {
+    color: var(--rsa-secondary);
+}
+
+.method-link:hover::after {
+    width: 100%;
+}
+
 .bmc-container {
     background: white;
     padding: 20px;
@@ -362,45 +390,67 @@ h4,
 
 /* Accordion RSA (FAQ) */
 .accordion-item {
-    border: none;
-    margin-bottom: 10px;
-    border-radius: 10px !important;
+    background: var(--rsa-glass) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    margin-bottom: 15px;
+    border-radius: 15px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(14, 105, 115, 0.05);
+    transition: var(--rsa-transition);
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(14, 105, 115, 0.1);
+}
+
+.accordion-header {
+    margin-bottom: 0;
 }
 
 .accordion-button {
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    border-radius: 10px !important;
-    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--rsa-primary) !important;
+    background: transparent !important;
+    padding: 20px 25px;
+    box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: var(--rsa-support);
-    color: var(--rsa-primary);
-    box-shadow: none;
+    color: var(--rsa-primary) !important;
+    border-bottom: 1px solid rgba(14, 105, 115, 0.1);
 }
 
-/* Custom Icon for Accordion (+ / -) */
 .accordion-button::after {
     content: "\f067";
-    /* FontAwesome Plus */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     background-image: none;
     transform: none;
     transition: all 0.3s ease;
+    color: var(--rsa-accent);
+    font-size: 1.2rem;
 }
 
 .accordion-button:not(.collapsed)::after {
     content: "\f068";
-    /* FontAwesome Minus */
+    color: var(--rsa-primary);
     transform: rotate(180deg);
 }
 
 .accordion-body {
-    font-size: 1.05rem;
-    color: #555;
-    padding: 0 20px 25px;
+    font-size: 1rem;
+    color: var(--rsa-text);
+    padding: 20px 25px 25px;
+    line-height: 1.7;
+}
+
+.accordion-body strong {
+    color: var(--rsa-primary);
 }
 
 /* Seta do balão */

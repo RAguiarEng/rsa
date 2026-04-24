@@ -44,4 +44,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Lógica para o Modal Dinâmico do Método RSA
+    const methodModal = document.getElementById('methodModal');
+    if (methodModal) {
+        methodModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const imageSrc = button.getAttribute('data-bs-image');
+            const title = button.getAttribute('data-bs-title');
+            
+            const modalTitle = methodModal.querySelector('.modal-title');
+            const modalImage = methodModal.querySelector('#methodModalImage');
+            
+            modalTitle.textContent = title;
+            modalImage.src = imageSrc;
+        });
+    }
 });
