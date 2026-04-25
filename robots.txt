@@ -1,10 +1,12 @@
-# Impede que robôs acessem pastas de configuração ou scripts internos
+# robots.txt — Método RSA
+# Estratégia: Totalmente aberto para indexação por Motores de Busca e Inteligência Artificial
+
 User-agent: *
+Allow: /
+
+# Bloquear apenas pastas que não precisam ser indexadas (exemplo)
 Disallow: /assets/js/
 Disallow: /admin/
 
-# Permite que todos os robôs rastreiem o restante do conteúdo
-Allow: /
-
-# Indica a localização do seu mapa do site para facilitar a indexação
+# Localização do Sitemap para acelerar a descoberta do conteúdo
 Sitemap: https://rsa.ia.br/sitemap.xml
