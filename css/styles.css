@@ -570,3 +570,156 @@ footer .small.text-muted {
     visibility: visible;
     opacity: 1;
 }
+
+/* ════════════════════════════════════════
+   PLAN CARDS — Seção de Planos RSA
+════════════════════════════════════════ */
+.plan-card {
+    border-radius: 20px;
+    transition: var(--rsa-transition);
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(14, 105, 115, 0.15);
+}
+
+/* Card destaque */
+.plan-card--featured {
+    border: 2px solid var(--rsa-accent) !important;
+    background: linear-gradient(
+        160deg,
+        rgba(14, 105, 115, 0.06) 0%,
+        rgba(242, 187, 22, 0.04) 100%
+    ) !important;
+    box-shadow: 0 12px 40px rgba(242, 187, 22, 0.15);
+}
+
+.plan-card--featured:hover {
+    box-shadow: 0 20px 60px rgba(242, 187, 22, 0.25);
+}
+
+/* Badge "Mais Escolhido" */
+.plan-popular-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--rsa-accent);
+    color: var(--rsa-primary);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: .78rem;
+    padding: 5px 18px;
+    border-radius: 20px;
+    white-space: nowrap;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(242, 187, 22, 0.35);
+}
+
+/* Badge de prazo */
+.plan-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(14, 105, 115, 0.1);
+    color: var(--rsa-primary);
+    font-size: .78rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.plan-badge--accent {
+    background: rgba(242, 187, 22, 0.15);
+    color: var(--rsa-contrast);
+}
+
+.plan-badge--dark {
+    background: rgba(51, 51, 51, 0.08);
+    color: var(--rsa-text);
+}
+
+/* Nome do plano */
+.plan-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--rsa-primary);
+}
+
+/* Lista de features */
+.plan-features li {
+    padding: 7px 0;
+    font-size: .93rem;
+    border-bottom: 1px solid rgba(0,0,0,.04);
+    line-height: 1.5;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+/* Bloco de preço */
+.plan-price {
+    text-align: center;
+    padding: 16px;
+    background: rgba(14, 105, 115, 0.05);
+    border-radius: 12px;
+}
+
+.plan-from {
+    display: block;
+    font-size: .78rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 2px;
+}
+
+.plan-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--rsa-primary);
+    line-height: 1.1;
+}
+
+.plan-period {
+    display: block;
+    font-size: .8rem;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* Botão outline para planos secundários */
+.btn-outline-plan {
+    display: block;
+    text-align: center;
+    background: transparent;
+    color: var(--rsa-primary);
+    font-weight: 700;
+    border: 2px solid var(--rsa-primary);
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: .88rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: var(--rsa-transition);
+}
+
+.btn-outline-plan:hover {
+    background: var(--rsa-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(14, 105, 115, 0.25);
+}
+
+/* Ajuste do btn-rsa para ocupar largura total */
+.plan-card .btn-rsa {
+    display: block;
+    text-align: center;
+    font-size: .88rem;
+}
