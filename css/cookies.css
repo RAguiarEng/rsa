@@ -1,0 +1,328 @@
+/* ── RSA Cookie Consent Styles ── */
+
+:root {
+    /* Repetindo as variáveis principais para garantir escopo ou referência */
+    --rsa-primary: #0E6973;
+    --rsa-secondary: #118C8C;
+    --rsa-accent: #F2BB16;
+    --rsa-bg-dark: #121212;
+    --rsa-glass-dark: rgba(14, 105, 115, 0.95);
+    --rsa-glass-light: rgba(255, 255, 255, 0.98);
+}
+
+/* ── Banner Principal ── */
+.cookie-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background: var(--rsa-glass-dark);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #fff;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    z-index: 9999;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
+    animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.cookie-text strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--rsa-accent);
+}
+
+.cookie-text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cookie-text a {
+    color: var(--rsa-accent);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.cookie-text a:hover {
+    color: #fff;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.cookie-buttons button {
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+#btn-accept {
+    background: var(--rsa-accent);
+    color: var(--rsa-primary);
+}
+
+#btn-accept:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+#btn-reject {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#btn-reject:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#btn-manage {
+    background: transparent;
+    color: #fff;
+    text-decoration: underline;
+    padding: 12px 0;
+}
+
+#btn-manage:hover {
+    color: var(--rsa-accent);
+}
+
+/* ── Modal de Preferências ── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.cookie-modal {
+    background: var(--rsa-glass-light);
+    color: var(--rsa-text);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.cookie-modal h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    color: var(--rsa-primary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0 0 32px;
+    line-height: 1.6;
+}
+
+/* ── Opções de Cookies ── */
+.cookie-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    gap: 24px;
+}
+
+.option-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.option-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--rsa-primary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.option-desc {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ── Toggle Switch Custom ── */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.toggle.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #e0e0e0;
+    border-radius: 28px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle input:checked + .slider {
+    background: var(--rsa-secondary);
+}
+
+.toggle input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+/* ── Ações do Modal ── */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 24px;
+}
+
+.modal-actions button {
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+#btn-accept-all {
+    background: var(--rsa-secondary);
+    color: #fff;
+}
+
+#btn-accept-all:hover {
+    background: var(--rsa-primary);
+    transform: translateY(-2px);
+}
+
+#btn-save {
+    background: var(--rsa-accent);
+    color: var(--rsa-primary);
+}
+
+#btn-save:hover {
+    background: var(--rsa-contrast);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+#btn-reject-all {
+    background: transparent;
+    color: #777;
+    border: 1px solid #ccc;
+}
+
+#btn-reject-all:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 768px) {
+    .cookie-banner {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 20px 20px 0 0;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .cookie-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .cookie-buttons button {
+        flex: 1;
+        padding: 14px 10px;
+    }
+
+    .cookie-modal {
+        padding: 24px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-actions button {
+        width: 100%;
+    }
+}
+
+/* ── Utilitários ── */
+.hidden {
+    display: none !important;
+}

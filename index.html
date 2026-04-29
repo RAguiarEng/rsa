@@ -2,13 +2,25 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Custom CSS de cookies  -->
+    <link rel="stylesheet" href="css/cookies.css">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FB5DGWFDK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
+        // Inicialização do Consent Mode (Default Denied)
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500
+        });
+
+        gtag('js', new Date());
         gtag('config', 'G-6FB5DGWFDK');
     </script>
 
@@ -703,10 +715,94 @@
         </div>
     </div>
 
+
+    <!-- Banner principal -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-text">
+            <strong>🍪 Preferências de Cookies</strong>
+            <p>
+                Usamos cookies para melhorar sua experiência. Você pode aceitar todos,
+                recusar os não essenciais ou personalizar suas preferências.
+                Saiba mais na nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.
+            </p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="btn-manage">Gerenciar preferências</button>
+            <button id="btn-reject">Recusar</button>
+            <button id="btn-accept">Aceitar todos</button>
+        </div>
+    </div>
+
+    <!-- Modal de preferências -->
+    <div id="cookie-modal-overlay" class="modal-overlay hidden">
+        <div class="cookie-modal">
+            <h2>Gerenciar preferências de cookies</h2>
+            <p class="modal-desc">
+                Escolha quais categorias de cookies você deseja permitir.
+                Os cookies essenciais não podem ser desativados pois são necessários para o funcionamento do site.
+            </p>
+
+            <div class="cookie-option">
+                <div class="option-info">
+                    <span class="option-title">Essenciais</span>
+                    <span class="option-desc">Necessários para o funcionamento básico do site. Sempre ativos.</span>
+                </div>
+                <label class="toggle disabled">
+                    <input type="checkbox" checked disabled>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <div class="option-info">
+                    <span class="option-title">Funcionais</span>
+                    <span class="option-desc">Permitem funcionalidades extras como chat ao vivo e preferências
+                        salvas.</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="pref-functional">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <div class="option-info">
+                    <span class="option-title">Analíticos</span>
+                    <span class="option-desc">Nos ajudam a entender como os visitantes interagem com o site (ex: Google
+                        Analytics).</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="pref-analytics">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <div class="option-info">
+                    <span class="option-title">Marketing</span>
+                    <span class="option-desc">Usados para exibir anúncios relevantes com base no seu perfil de
+                        navegação.</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="pref-marketing">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="modal-actions">
+                <button id="btn-reject-all">Recusar todos</button>
+                <button id="btn-save">Salvar preferências</button>
+                <button id="btn-accept-all">Aceitar todos</button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/cookies.js"></script>
 </body>
 
 </html>
