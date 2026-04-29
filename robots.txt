@@ -4,8 +4,7 @@
 User-agent: *
 Allow: /
 
-# Bloquear apenas pastas que não precisam ser indexadas (exemplo)
-Disallow: /assets/js/
+# Bloquear apenas pastas administrativas (inexistentes em produção, por precaução)
 Disallow: /admin/
 
 # Localização do Sitemap para acelerar a descoberta do conteúdo
