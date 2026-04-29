@@ -1,0 +1,454 @@
+/* ═══════════════════════════════════════════════════════════
+   diy-host.css — Estilos exclusivos da página de planos DIY
+   Depende de: styles.css (design system RSA)
+═══════════════════════════════════════════════════════════ */
+
+/* ── Botão outline exclusivo desta página ── */
+.btn-outline-rsa {
+    background: transparent;
+    color: var(--rsa-primary);
+    font-weight: 700;
+    border: 2px solid var(--rsa-primary);
+    border-radius: 10px;
+    padding: 12px 30px;
+    transition: var(--rsa-transition);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-outline-rsa:hover {
+    background: var(--rsa-primary);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(14, 105, 115, 0.3);
+}
+
+/* ── Cor accent no texto ── */
+.text-rsa-accent {
+    color: var(--rsa-accent);
+}
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+.diy-hero-section {
+    position: relative;
+    padding: 140px 0 100px;
+    background: linear-gradient(135deg, var(--rsa-primary) 0%, var(--rsa-secondary) 100%);
+    overflow: hidden;
+}
+
+/* Partículas decorativas de fundo */
+.diy-hero-section::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(242, 187, 22, 0.08);
+    pointer-events: none;
+}
+
+.diy-hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 60px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+}
+
+/* Badge do Hero */
+.diy-hero-badge {
+    background: rgba(242, 187, 22, 0.15);
+    border: 1px solid rgba(242, 187, 22, 0.4);
+    color: var(--rsa-accent);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Logos do Hero */
+.diy-hero-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.diy-logo-rsa {
+    height: 80px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.diy-logo-divider {
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+/* Badge Hostinger (substitui imagem externa) */
+.diy-hostinger-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 14px 24px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.diy-h-icon {
+    font-size: 2rem;
+    color: var(--rsa-accent);
+    font-weight: 900;
+}
+
+.diy-hostinger-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+/* Pill de desconto */
+.diy-discount-pill {
+    display: inline-block;
+    background: rgba(242, 187, 22, 0.15);
+    border: 1px solid rgba(242, 187, 22, 0.35);
+    color: var(--rsa-accent);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+
+/* Wave separador */
+.diy-hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.diy-hero-wave svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+/* ══════════════════════════════════════════
+   ÍCONE DE SEÇÃO
+══════════════════════════════════════════ */
+.diy-section-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--rsa-primary), var(--rsa-secondary));
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(14, 105, 115, 0.25);
+    transition: var(--rsa-transition);
+}
+
+.diy-section-icon:hover {
+    transform: translateY(-4px) rotate(5deg);
+    box-shadow: 0 12px 32px rgba(14, 105, 115, 0.35);
+}
+
+.diy-section-icon--accent {
+    background: linear-gradient(135deg, var(--rsa-accent), var(--rsa-contrast));
+    box-shadow: 0 8px 24px rgba(242, 187, 22, 0.25);
+}
+
+.diy-section-icon--accent:hover {
+    box-shadow: 0 12px 32px rgba(242, 187, 22, 0.35);
+}
+
+.diy-section-icon--secondary {
+    background: linear-gradient(135deg, var(--rsa-secondary), #0a6d7a);
+    box-shadow: 0 8px 24px rgba(17, 140, 140, 0.25);
+}
+
+/* ══════════════════════════════════════════
+   TOGGLE DE PERÍODO
+══════════════════════════════════════════ */
+.diy-period-group {
+    display: inline-flex;
+    background: rgba(14, 105, 115, 0.08);
+    border: 1px solid rgba(14, 105, 115, 0.15);
+    border-radius: 14px;
+    padding: 5px;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.diy-period-btn {
+    background: transparent;
+    border: none;
+    color: var(--rsa-primary);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 9px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--rsa-transition);
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+}
+
+.diy-period-btn:hover {
+    background: rgba(14, 105, 115, 0.1);
+    color: var(--rsa-primary);
+}
+
+.diy-period-btn.active {
+    background: var(--rsa-primary);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(14, 105, 115, 0.25);
+}
+
+/* ══════════════════════════════════════════
+   CARDS DE PLANO
+══════════════════════════════════════════ */
+.diy-plan-card {
+    position: relative;
+    padding: 32px 28px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--rsa-transition);
+    overflow: hidden;
+}
+
+.diy-plan-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(14, 105, 115, 0.15);
+}
+
+/* Card popular (destaque) */
+.diy-plan-card--popular {
+    border: 2px solid var(--rsa-accent) !important;
+    box-shadow: 0 8px 32px rgba(242, 187, 22, 0.15);
+}
+
+.diy-plan-card--popular:hover {
+    box-shadow: 0 16px 48px rgba(242, 187, 22, 0.25);
+}
+
+/* Badge "Mais Popular" */
+.diy-popular-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--rsa-accent);
+    color: var(--rsa-primary);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Cabeçalho interno do card */
+.diy-plan-header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(14, 105, 115, 0.1);
+}
+
+.diy-plan-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--rsa-primary);
+    margin-bottom: 6px;
+    /* Evita sobreposição com o badge popular */
+    padding-right: 90px;
+}
+
+.diy-plan-desc {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Lista de recursos */
+.diy-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+    flex-grow: 1;
+}
+
+.diy-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 0.92rem;
+    color: var(--rsa-text);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    line-height: 1.5;
+}
+
+.diy-feature-list li:last-child {
+    border-bottom: none;
+}
+
+.diy-feature-list li i {
+    margin-top: 2px;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+}
+
+/* ══════════════════════════════════════════
+   CTA FINAL
+══════════════════════════════════════════ */
+.diy-cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--rsa-primary) 0%, var(--rsa-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.diy-cta-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+}
+
+.diy-cta-icon {
+    font-size: 3rem;
+    color: var(--rsa-accent);
+    display: block;
+    animation: pulse-icon 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+    0%, 100% { transform: scale(1);   opacity: 1; }
+    50%       { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* ══════════════════════════════════════════
+   TRANSIÇÃO DE LINK (feedback ao trocar período)
+══════════════════════════════════════════ */
+.diy-plan-card .btn {
+    transition: var(--rsa-transition), background 0.15s ease;
+}
+
+/* Flash sutil ao atualizar o link */
+.diy-link-updated {
+    animation: link-flash 0.4s ease;
+}
+
+@keyframes link-flash {
+    0%   { opacity: 1; }
+    30%  { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVIDADE
+══════════════════════════════════════════ */
+
+/* Tablet */
+@media (max-width: 991.98px) {
+    .diy-hero-section {
+        padding: 120px 0 90px;
+        text-align: center;
+    }
+
+    .diy-hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .diy-hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .diy-hero-section .d-flex {
+        justify-content: center;
+    }
+
+    .diy-hero-logos {
+        margin-top: 20px;
+    }
+
+    .diy-logo-rsa {
+        height: 60px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .diy-hero-section {
+        padding: 100px 0 80px;
+    }
+
+    .diy-hero-section h1 {
+        font-size: 1.7rem;
+    }
+
+    .diy-period-group {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .diy-period-btn {
+        padding: 9px 14px;
+        font-size: 0.8rem;
+    }
+
+    .diy-plan-card {
+        padding: 24px 20px;
+    }
+
+    .diy-plan-name {
+        font-size: 1.2rem;
+        padding-right: 80px;
+    }
+
+    .diy-cta-section {
+        padding: 70px 0;
+    }
+
+    .diy-logo-rsa {
+        height: 50px;
+    }
+
+    .diy-hostinger-text {
+        font-size: 1.2rem;
+    }
+}
