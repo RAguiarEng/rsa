@@ -11,10 +11,10 @@
 // Armazena qual período está selecionado em cada categoria
 // ══════════════════════════════════════════════════════════
 const activePeriods = {
-    'sites-ia':        12,
-    'horizons':         1,
-    'email-business':   1,
-    'email-marketing':  1
+    'sites-ia': 12,
+    'horizons': 1,
+    'email-business': 1,
+    'email-marketing': 1
 };
 
 // ══════════════════════════════════════════════════════════
@@ -129,50 +129,7 @@ function highlightNavOnScroll() {
     });
 }
 
-// ══════════════════════════════════════════════════════════
-// smoothScrollNavLinks()
-// Scroll suave para âncoras internas desta página
-// (complementa o scripts.js sem conflito)
-// ══════════════════════════════════════════════════════════
-function smoothScrollNavLinks() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-
-            // Ignora links que são apenas "#" (CTAs sem período)
-            if (targetId === '#') return;
-
-            const target = document.querySelector(targetId);
-            if (target) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
-// ══════════════════════════════════════════════════════════
-// closeMobileMenuOnNavClick()
-// Fecha o menu mobile ao clicar em link desta página
-// (compatível com o collapse do scripts.js)
-// ══════════════════════════════════════════════════════════
-function closeMobileMenuOnNavClick() {
-    const navbarCollapse = document.getElementById('navbarNavDIY');
-    if (!navbarCollapse) return;
-
-    const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-
-    document.querySelectorAll('#navbarNavDIY .nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth < 992) {
-                bsCollapse.hide();
-            }
-        });
-    });
-}
+// (Funções de Scroll Suave e Fechar Menu Mobile foram migradas e unificadas no scripts.js global)
 
 // ══════════════════════════════════════════════════════════
 // INICIALIZAÇÃO
@@ -184,12 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Destaca nav conforme scroll
     highlightNavOnScroll();
-
-    // Scroll suave para âncoras
-    smoothScrollNavLinks();
-
-    // Fecha menu mobile ao navegar
-    closeMobileMenuOnNavClick();
 
     // AOS — inicializado pelo scripts.js global,
     // mas chamamos refresh() para garantir que os

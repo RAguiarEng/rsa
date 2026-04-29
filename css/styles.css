@@ -587,11 +587,9 @@ footer .small.text-muted {
 /* Card destaque */
 .plan-card--featured {
     border: 2px solid var(--rsa-accent) !important;
-    background: linear-gradient(
-        160deg,
-        rgba(14, 105, 115, 0.06) 0%,
-        rgba(242, 187, 22, 0.04) 100%
-    ) !important;
+    background: linear-gradient(160deg,
+            rgba(14, 105, 115, 0.06) 0%,
+            rgba(242, 187, 22, 0.04) 100%) !important;
     box-shadow: 0 12px 40px rgba(242, 187, 22, 0.15);
 }
 
@@ -654,7 +652,7 @@ footer .small.text-muted {
 .plan-features li {
     padding: 7px 0;
     font-size: .93rem;
-    border-bottom: 1px solid rgba(0,0,0,.04);
+    border-bottom: 1px solid rgba(0, 0, 0, .04);
     line-height: 1.5;
 }
 
@@ -722,4 +720,349 @@ footer .small.text-muted {
     display: block;
     text-align: center;
     font-size: .88rem;
+}
+
+/* ══════════════════════════════════════════════
+   HERO SECTION v2.0 — RSA
+   Princípio: Split layout | Visual hierarchy
+   Mobile-first obrigatório
+════════════════════════════════════════════════ */
+
+/* ── Badge de Autoridade ── */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(242, 187, 22, 0.15);
+    border: 1px solid rgba(242, 187, 22, 0.4);
+    color: var(--rsa-accent);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ── Título principal ── */
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+}
+
+.hero-highlight {
+    color: var(--rsa-accent);
+    position: relative;
+    display: inline-block;
+}
+
+/* Sublinhado animado na palavra destacada */
+.hero-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--rsa-accent);
+    border-radius: 2px;
+    animation: underline-grow 0.8s 0.8s ease-out both;
+}
+
+@keyframes underline-grow {
+    from {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    to {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+/* ── Subtítulo ── */
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+.hero-subtitle strong {
+    color: var(--rsa-accent);
+    font-weight: 700;
+}
+
+/* ── CTA Principal ── */
+.btn-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--rsa-transition);
+    background: var(--rsa-accent);
+    color: var(--rsa-primary);
+}
+
+.btn-hero-cta:hover {
+    background: #fff;
+    color: var(--rsa-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(242, 187, 22, 0.45);
+}
+
+/* ── CTA Secundário ── */
+.btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--rsa-transition);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+}
+
+.btn-hero-secondary:hover {
+    color: var(--rsa-accent);
+    border-bottom-color: var(--rsa-accent);
+}
+
+/* ── Micro-copy ── */
+.hero-microcopy {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 0;
+}
+
+.hero-microcopy i {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ══════════════════════════════════════════════
+   VISUAL WRAPPER — Logo + Rings + Badges flutuantes
+════════════════════════════════════════════════ */
+.hero-visual-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Anel externo decorativo estático */
+.hero-ring-outer {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(242, 187, 22, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    transition: var(--rsa-transition);
+}
+
+/* Anel interno estático com glassmorphism */
+.hero-ring-inner {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-logo {
+    width: 160px;
+    height: auto;
+    filter: drop-shadow(0 4px 16px rgba(242, 187, 22, 0.3));
+    transition: var(--rsa-transition);
+}
+
+/* Hover — Efeito de ênfase no círculo amarelo ao interagir com o logo */
+.hero-visual-wrapper:hover .hero-ring-outer {
+    border-color: rgba(242, 187, 22, 0.6);
+    box-shadow: 0 0 30px rgba(242, 187, 22, 0.15);
+}
+
+.hero-visual-wrapper:hover .hero-logo {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 24px rgba(242, 187, 22, 0.5));
+}
+
+
+/* ── Selos flutuantes ── */
+.hero-badge-float {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero-badge-float--tl {
+    top: 20px;
+    left: -30px;
+}
+
+.hero-badge-float--br {
+    bottom: 20px;
+    right: -30px;
+}
+
+/* ══════════════════════════════════════════════
+   ESTATÍSTICAS — Prova Social
+════════════════════════════════════════════════ */
+.hero-stats-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 20px 24px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 4px;
+}
+
+.hero-stat-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--rsa-accent);
+    line-height: 1;
+}
+
+.hero-stat-label {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.hero-stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+    margin: 0 8px;
+}
+
+/* ══════════════════════════════════════════════
+   WAVE SEPARADOR
+════════════════════════════════════════════════ */
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.hero-wave svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+/* Ajuste de padding-bottom para não cortar a wave */
+.hero-section {
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVIDADE — Mobile First
+════════════════════════════════════════════════ */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .hero-ring-outer {
+        width: 240px;
+        height: 240px;
+    }
+
+    .hero-ring-inner {
+        width: 190px;
+        height: 190px;
+    }
+
+    .hero-logo {
+        width: 120px;
+    }
+
+    .hero-badge-float--tl {
+        left: 0;
+        top: 10px;
+        font-size: 0.68rem;
+    }
+
+    .hero-badge-float--br {
+        right: 0;
+        bottom: 10px;
+        font-size: 0.68rem;
+    }
+
+    .btn-hero-cta,
+    .btn-hero-secondary {
+        display: block;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 1.85rem;
+    }
+
+    .hero-stat-value {
+        font-size: 1.4rem;
+    }
+
+    .hero-stats-row {
+        padding: 16px 12px;
+    }
+
+    .hero-badge-float {
+        display: none;
+        /* Evita overflow em telas muito pequenas */
+    }
 }
