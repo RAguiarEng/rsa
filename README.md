@@ -22,6 +22,8 @@ O **Método RSA** é uma consultoria estratégica em tecnologia desenhada para p
 
 Nossa metodologia é fundamentada em padrões globais de excelência, com referências diretas ao prestigiado relatório [Standard AI Index 2026](https://hai.stanford.edu/ai-index/2026-ai-index-report) da **Stanford University**, garantindo que sua empresa utilize o que há de mais avançado e ético no ecossistema de Inteligência Artificial.
 
+**Acesse o site do método RSA em [rsa.ia.br](https://rsa.ia.br)**
+
 ---
 
 ## 🛠️ Os Pilares da Eficiência
