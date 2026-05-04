@@ -16,10 +16,17 @@
   </url>
 
   <url>
+    <loc>https://rsa.ia.br/quiz.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://rsa.ia.br/politica-de-privacidade.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
-</urlset>
+</urlset>
