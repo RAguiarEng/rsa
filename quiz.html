@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Diagnóstico RSA — Descubra em qual etapa da transformação digital seu negócio se encontra.">
+    <title>Diagnóstico RSA | Reorganiza, Simplifica e Automatiza</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FB5DGWFDK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-6FB5DGWFDK');
+    </script>
+
+    <!-- SEO & AI Optimization -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Diagnóstico RSA | Reorganiza, Simplifica e Automatiza">
+    <meta property="og:description"
+        content="Descubra em qual etapa da transformação digital seu negócio se encontra com o diagnóstico gratuito RSA.">
+    <meta property="og:url" content="https://rsa.ia.br/quiz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rsa.ia.br/assets/images/BMC.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- RSA Design System -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Quiz Styles -->
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+
+    <!-- ════════════════════════════════════════
+         NAVBAR
+    ════════════════════════════════════════ -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top" style="padding: 20px 0;" role="navigation"
+        aria-label="Navegação principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                <img src="assets/images/RSA_dourado_FundoTransparente.svg" alt="RSA Logo" height="40">
+                <div class="nav-brand-box text-white rounded-2 px-2 py-1">
+                    <div class="fw-bold" style="font-family:'Montserrat',sans-serif; font-size:1rem;">
+                        <span class="letter">R</span>eorganiza,
+                        <span class="letter">S</span>implifica e
+                        <span class="letter">A</span>utomatiza
+                    </div>
+                    <div class="slogan-text text-white-50">Assessoria em Soluções Tecnológicas</div>
+                </div>
+            </a>
+
+            <a href="index.html" class="btn btn-sm ms-auto"
+                style="background:rgba(255,255,255,0.12); color:#fff; border:1px solid rgba(255,255,255,0.25); border-radius:8px; padding:8px 18px; font-weight:600; font-size:0.85rem;">
+                <i class="fas fa-arrow-left me-2"></i>Voltar ao Site
+            </a>
+        </div>
+    </nav>
+
+    <!-- ════════════════════════════════════════
+         HERO DO QUIZ
+    ════════════════════════════════════════ -->
+    <section class="quiz-hero-section" id="quiz-hero">
+        <div class="container text-center">
+
+            <div class="quiz-hero-badge mb-3" data-aos="fade-down">
+                <i class="fas fa-microscope me-2"></i>Diagnóstico Gratuito
+            </div>
+
+            <h1 class="quiz-hero-title" data-aos="fade-up" data-aos-delay="100">
+                Descubra em que fase está <br>
+                a <span class="quiz-hero-highlight">transformação digital</span> do seu negócio
+            </h1>
+
+            <p class="quiz-hero-subtitle mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Responda o <strong>formulário</strong> para descobrirmos o estado atual da
+                sua rotina e também para receber um plano estratégico de trabalho.
+            </p>
+
+            <div class="quiz-meta d-flex align-items-center justify-content-center gap-4 flex-wrap" data-aos="fade-up"
+                data-aos-delay="300">
+                <div class="quiz-meta-item">
+                    <i class="fas fa-clock me-2"></i>
+                    <span>~3 minutos</span>
+                </div>
+                <div class="quiz-meta-divider"></div>
+                <div class="quiz-meta-item">
+                    <i class="fas fa-list-check me-2"></i>
+                    <span>14 perguntas</span>
+                </div>
+                <div class="quiz-meta-divider"></div>
+                <div class="quiz-meta-item">
+                    <i class="fas fa-shield-halved me-2"></i>
+                    <span>100% confidencial</span>
+                </div>
+            </div>
+
+            <button class="btn-quiz-start mt-4" id="btn-start-quiz" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fas fa-play me-2"></i>Iniciar Diagnóstico
+            </button>
+
+        </div>
+
+        <!-- Wave -->
+        <div class="quiz-hero-wave">
+            <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F8F9FA" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         ÁREA DO QUIZ (Carrossel)
+    ════════════════════════════════════════ -->
+    <section class="quiz-section" id="quiz-section" aria-label="Quiz de diagnóstico">
+        <div class="container">
+
+            <!-- Cabeçalho do Quiz (visível durante o quiz) -->
+            <div class="quiz-header text-center mb-4" id="quiz-header">
+                <div class="quiz-step-label">
+                    Pergunta <span id="current-step">1</span> de <span id="total-steps">14</span>
+                </div>
+                <div class="quiz-category-label" id="quiz-category-label">
+                    <!-- Categoria dinâmica -->
+                </div>
+            </div>
+
+            <!-- Wrapper do carrossel -->
+            <div class="quiz-carousel-wrapper" id="quiz-carousel-wrapper">
+                <div class="quiz-carousel-track" id="quiz-carousel-track">
+
+                    <!-- IDENTIFICAÇÃO DO VISITANTE -->
+                    <div class="quiz-slide" data-question="1" data-category="Identificação">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">01</div>
+                            <h2 class="quiz-question-text">
+                                Por favor, se apresente para iniciarmos o seu diagnóstico personalizado.
+                            </h2>
+                            <p class="quiz-question-hint">
+                                Seus dados estão seguros e serão usados para gerar o seu plano de ação.
+                            </p>
+
+                            <div class="quiz-form-container">
+                                <div class="quiz-form-group mb-3">
+                                    <label for="nome" class="quiz-form-label">Nome Completo</label>
+                                    <div class="quiz-input-wrapper">
+                                        <i class="fas fa-user quiz-form-icon"></i>
+                                        <input type="text" name="nome" id="nome" class="quiz-form-input"
+                                            placeholder="Como podemos te chamar?" required>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-form-group mb-3">
+                                    <label for="email" class="quiz-form-label">E-mail Profissional</label>
+                                    <div class="quiz-input-wrapper">
+                                        <i class="fas fa-envelope quiz-form-icon"></i>
+                                        <input type="email" name="email" id="email" class="quiz-form-input"
+                                            placeholder="seu@email.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-form-group mb-4">
+                                    <label for="telefone" class="quiz-form-label">WhatsApp / Telefone</label>
+                                    <div class="quiz-input-wrapper">
+                                        <i class="fas fa-phone quiz-form-icon"></i>
+                                        <input type="tel" name="telefone" id="telefone" class="quiz-form-input"
+                                            placeholder="(00) 00000-0000">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-next w-100" id="btn-start-form">
+                                    <span>Iniciar Diagnóstico</span>
+                                    <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 2
+                         Tipo: Múltipla escolha (ícone + texto)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="2" data-category="Segmento de Clientes">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">02</div>
+                            <h2 class="quiz-question-text">
+                                <!-- PERGUNTA 2 -->
+                                Seus clientes atuais valorizam sua experiência profissional ou a velocidade da sua
+                                entrega?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                Entrega: qualquer serviço prestado de forma remota ou presencial.
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <!-- OPÇÃO A -->
+                                <button class="quiz-option-card" data-question="1" data-value="A">
+                                    <span class="quiz-option-icon"><i class="fas fa-brain"></i></span>
+                                    <span class="quiz-option-label">Expertise estratégica</span>
+                                </button>
+                                <!-- OPÇÃO B -->
+                                <button class="quiz-option-card" data-question="1" data-value="B">
+                                    <span class="quiz-option-icon"><i class="fas fa-bolt"></i></span>
+                                    <span class="quiz-option-label">Velocidade de entrega</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back invisible" disabled>
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 3
+                         Tipo: Escala (1 a 5)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="3" data-category="Relacionamento com Clientes">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">03</div>
+                            <h2 class="quiz-question-text">
+                                Você tem conseguido usar tecnologia para resgatar a empatia e o vínculo humano?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                Tecnologia: qualquer recurso de trabalho (planilha, site, app, whatsapp, chatbot, etc).
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <!-- OPÇÃO A -->
+                                <button class="quiz-option-card" data-question="2" data-value="A">
+                                    <span class="quiz-option-icon"><i class="fas fa-heart"></i></span>
+                                    <span class="quiz-option-label">
+                                        Sim. Meus clientes elogiam a relação cliente-profissional.
+                                    </span>
+                                </button>
+                                <!-- OPÇÃO B -->
+                                <button class="quiz-option-card" data-question="2" data-value="B">
+                                    <span class="quiz-option-icon"><i class="fas fa-user-slash"></i></span>
+                                    <span class="quiz-option-label">
+                                        Não. Meus clientes estão insatisfeitos com algum ponto da interação.
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 4
+                         Tipo: Sim / Não / Parcialmente
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="4" data-category="Canais">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">04</div>
+                            <h2 class="quiz-question-text">
+                                Sua entrega depende de atividades manuais constantemente?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                A forma como você se comunica e alcança seus clientes.
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--3col">
+                                <button class="quiz-option-yesno quiz-option-yesno--yes" data-question="3"
+                                    data-value="sim">
+                                    <span class="quiz-yn-icon"><i class="fas fa-check"></i></span>
+                                    <span>Sim</span>
+                                </button>
+                                <button class="quiz-option-yesno quiz-option-yesno--partial" data-question="3"
+                                    data-value="parcialmente">
+                                    <span class="quiz-yn-icon"><i class="fas fa-equals"></i></span>
+                                    <span>Parcialmente</span>
+                                </button>
+                                <button class="quiz-option-yesno quiz-option-yesno--no" data-question="3"
+                                    data-value="nao">
+                                    <span class="quiz-yn-icon"><i class="fas fa-times"></i></span>
+                                    <span>Não</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 5
+                         Tipo: Múltipla escolha (ícone + texto)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="5" data-category="Proposta de valor">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">05</div>
+                            <h2 class="quiz-question-text">
+                                O valor do seu serviço é principalmente quantitativo ou qualitativo?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                Quantitativo: melhor preço, velocidade de entrega, eficiência operacional,
+                                segurança, garantia etc.<br>
+                                Qualitativo: atendimento, conveniência, personalização, design,
+                                status, inovação etc.
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <button class="quiz-option-card" data-question="4" data-value="A">
+                                    <span class="quiz-option-icon"><i class="fas fa-calculator"></i></span>
+                                    <span class="quiz-option-label">Quantitativo</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="4" data-value="B">
+                                    <span class="quiz-option-icon"><i class="fas fa-gem"></i></span>
+                                    <span class="quiz-option-label">Qualitativo</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 6
+                         Tipo: Sim / Não
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="6" data-category="Atividades-chave">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">06</div>
+                            <h2 class="quiz-question-text">
+                                Sua rotina exige muito trabalho repetitivo?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                Tarefas manuais, registros, cálculos, atualizações etc.
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <button class="quiz-option-yesno quiz-option-yesno--yes" data-question="5"
+                                    data-value="sim">
+                                    <span class="quiz-yn-icon"><i class="fas fa-check"></i></span>
+                                    <span>Sim</span>
+                                </button>
+                                <button class="quiz-option-yesno quiz-option-yesno--no" data-question="5"
+                                    data-value="nao">
+                                    <span class="quiz-yn-icon"><i class="fas fa-times"></i></span>
+                                    <span>Não</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ══════════════════════════════════════════════
+                        SLIDE 7 — Gestão do Conhecimento
+                        Grid: 2×2 (quiz-options-grid--2col)
+                        4 opções distribuídas em 2 linhas de 2 cards
+                    ════════════════════════════════════════════════ -->
+                    <div class="quiz-slide" data-question="7" data-category="Gestão do Conhecimento">
+                        <div class="quiz-card">
+
+                            <!-- Número da pergunta -->
+                            <div class="quiz-question-number">07</div>
+
+                            <!-- Texto da pergunta -->
+                            <h2 class="quiz-question-text">
+                                O conhecimento crítico do seu negócio pertence à empresa
+                                ou está no cérebro de um funcionário — ou em uma tecnologia?
+                            </h2>
+
+                            <!-- Instrução contextual -->
+                            <p class="quiz-question-hint">
+                                Sem aquele funcionário ou aquela tecnologia, minha empresa fecha.
+                            </p>
+
+                            <!-- ── Grid 2×2: repeat(2, 1fr) → 2 colunas, 2 linhas ── -->
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+
+                                <!-- Opção 1 — Profissional Liberal -->
+                                <div class="quiz-option-card" data-question="6" data-value="liberal" role="button"
+                                    tabindex="0"
+                                    aria-label="Sou profissional liberal. O conhecimento precisa estar comigo.">
+                                    <div class="quiz-option-icon">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                    <span class="quiz-option-label">
+                                        Sou profissional liberal. O conhecimento precisa estar comigo.
+                                    </span>
+                                </div>
+
+                                <!-- Opção 2 — Pertence à Empresa -->
+                                <div class="quiz-option-card" data-question="6" data-value="empresa" role="button"
+                                    tabindex="0"
+                                    aria-label="O conhecimento pertence à empresa, independente de pessoa ou tecnologia.">
+                                    <div class="quiz-option-icon">
+                                        <i class="fa-solid fa-building"></i>
+                                    </div>
+                                    <span class="quiz-option-label">
+                                        O conhecimento pertence à empresa, independente de pessoa ou tecnologia.
+                                    </span>
+                                </div>
+
+                                <!-- Opção 3 — Cérebro do Funcionário -->
+                                <div class="quiz-option-card" data-question="6" data-value="funcionario" role="button"
+                                    tabindex="0"
+                                    aria-label="O conhecimento está no cérebro de funcionário. Se ele for embora, minha empresa passará por dificuldades.">
+                                    <div class="quiz-option-icon">
+                                        <i class="fa-solid fa-person"></i>
+                                    </div>
+                                    <span class="quiz-option-label">
+                                        O conhecimento está no cérebro de funcionário. Se ele for embora,
+                                        minha empresa passará por dificuldades.
+                                    </span>
+                                </div>
+
+                                <!-- Opção 4 — Tecnologia sem Padrão -->
+                                <div class="quiz-option-card" data-question="6" data-value="tecnologia" role="button"
+                                    tabindex="0"
+                                    aria-label="O conhecimento está em uma tecnologia, mas sem padrão de uso. Qualquer falha, a empresa passará por dificuldades.">
+                                    <div class="quiz-option-icon">
+                                        <i class="fa-solid fa-microchip"></i>
+                                    </div>
+                                    <span class="quiz-option-label">
+                                        O conhecimento está em uma tecnologia, mas sem padrão de uso.
+                                        Qualquer falha, a empresa passará por dificuldades.
+                                    </span>
+                                </div>
+
+                            </div><!-- /.quiz-options-grid--2col -->
+
+                            <!-- Navegação interna -->
+                            <div class="quiz-card-nav">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fa-solid fa-arrow-left me-2"></i> Voltar
+                                </button>
+                            </div>
+
+                        </div><!-- /.quiz-card -->
+                    </div><!-- /.quiz-slide[data-question="6"] -->
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 8
+                         Tipo: Múltipla escolha (ícone + texto)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="8" data-category="Parcerias principais">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">08</div>
+                            <h2 class="quiz-question-text">
+                                Seus principais fornecedores de tecnologia oferecem treinamento, acompanhamento ou
+                                suporte
+                                contínuo?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                Você sabe qual tecnologia usa em sua empresa.
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <button class="quiz-option-card" data-question="7" data-value="A">
+                                    <span class="quiz-option-icon"><i class="fas fa-headset"></i></span>
+                                    <span class="quiz-option-label">Sim. Sei o que uso e sei como funciona.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="7" data-value="B">
+                                    <span class="quiz-option-icon"><i class="fas fa-comments"></i></span>
+                                    <span class="quiz-option-label">Parcialmente. Questiono o fornecedor quando
+                                        necessário.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="7" data-value="C">
+                                    <span class="quiz-option-icon"><i class="fas fa-toggle-on"></i></span>
+                                    <span class="quiz-option-label">Não. Funciona quando preciso e isso me basta.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="7" data-value="D">
+                                    <span class="quiz-option-icon"><i class="fas fa-triangle-exclamation"></i></span>
+                                    <span class="quiz-option-label">Não. Sofro com a falta de suporte.</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 9
+                         Tipo: Sim / Não / Parcialmente
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="9" data-category="Estrutura de custo">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">09</div>
+                            <h2 class="quiz-question-text">
+                                Os investimentos feitos em tecnologia aumentaram seu lucro?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                Lucro: receita, redução de tempo, redução de desperdício etc.
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--3col">
+                                <button class="quiz-option-yesno quiz-option-yesno--yes" data-question="8"
+                                    data-value="sim">
+                                    <span class="quiz-yn-icon"><i class="fas fa-check"></i></span>
+                                    <span>Sim</span>
+                                </button>
+                                <button class="quiz-option-yesno quiz-option-yesno--partial" data-question="8"
+                                    data-value="parcialmente">
+                                    <span class="quiz-yn-icon"><i class="fas fa-equals"></i></span>
+                                    <span>Parcialmente</span>
+                                </button>
+                                <button class="quiz-option-yesno quiz-option-yesno--no" data-question="8"
+                                    data-value="nao">
+                                    <span class="quiz-yn-icon"><i class="fas fa-times"></i></span>
+                                    <span>Não</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 10
+                         Tipo: Múltipla escolha (ícone + texto)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="10" data-category="Fontes de receita">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">10</div>
+                            <h2 class="quiz-question-text">
+                                Você deseja aplicar IA em alguma atividade do seu negócio?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                <!-- Dica-->
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <button class="quiz-option-card" data-question="9" data-value="A">
+                                    <span class="quiz-option-icon"><i class="fas fa-robot"></i></span>
+                                    <span class="quiz-option-label">Sim, com certeza.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="9" data-value="B">
+                                    <span class="quiz-option-icon"><i class="fas fa-brain"></i></span>
+                                    <span class="quiz-option-label">Sim, mas tenho receios.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="9" data-value="C">
+                                    <span class="quiz-option-icon"><i class="fas fa-ban"></i></span>
+                                    <span class="quiz-option-label">Não. Não sei se é para mim.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="9" data-value="D">
+                                    <span class="quiz-option-icon"><i class="fas fa-question"></i></span>
+                                    <span class="quiz-option-label">Não. Não vejo necessidade.</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 11
+                         Tipo: Múltipla escolha (1 a 5)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="11" data-category="Situação atual">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">11</div>
+                            <h2 class="quiz-question-text">
+                                O que melhor descreve sua situação atual?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                <!-- Dica -->
+                            </p>
+                            <div class="quiz-scale-wrapper">
+                                <div class="quiz-options-grid quiz-options-grid--5col">
+                                    <button class="quiz-option-scale" data-question="10" data-value="1">
+                                        <span class="quiz-scale-number"><i class="fas fa-user"></i></span>
+                                        <span class="quiz-scale-desc">Profissional liberal (Autônomo)</span>
+                                    </button>
+                                    <button class="quiz-option-scale" data-question="10" data-value="2">
+                                        <span class="quiz-scale-number"><i class="fas fa-briefcase"></i></span>
+                                        <span class="quiz-scale-desc">Empresário</span>
+                                    </button>
+                                    <button class="quiz-option-scale" data-question="10" data-value="3">
+                                        <span class="quiz-scale-number"><i class="fas fa-user-tag"></i></span>
+                                        <span class="quiz-scale-desc">Funcionário</span>
+                                    </button>
+                                    <button class="quiz-option-scale" data-question="10" data-value="4">
+                                        <span class="quiz-scale-number"><i class="fas fa-users-gear"></i></span>
+                                        <span class="quiz-scale-desc">Gestor / Líder</span>
+                                    </button>
+                                    <button class="quiz-option-scale" data-question="10" data-value="5">
+                                        <span class="quiz-scale-number"><i class="fas fa-ellipsis"></i></span>
+                                        <span class="quiz-scale-desc">Outro</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 12
+                         Tipo: Múltipla escolha (ícone + texto)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="12" data-category="Previsão em 90 dias">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">12</div>
+                            <h2 class="quiz-question-text">
+                                Como você descreve a rotina que almeja ter daqui a 90 dias?
+                            </h2>
+                            <p class="quiz-question-hint"><!-- Dica --></p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <button class="quiz-option-card" data-question="11" data-value="A">
+                                    <span class="quiz-option-icon"><i class="fas fa-gears"></i></span>
+                                    <span class="quiz-option-label">Tarefas internas repetitivas automatizadas.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="11" data-value="B">
+                                    <span class="quiz-option-icon"><i class="fas fa-headset"></i></span>
+                                    <span class="quiz-option-label">Ter um canal de comunicação automatizado para
+                                        clientes
+                                        e fornecedores.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="11" data-value="C">
+                                    <span class="quiz-option-icon"><i class="fas fa-vault"></i></span>
+                                    <span class="quiz-option-label">Conhecimento protegido em um sistema somente meu,
+                                        com
+                                        gestão inteligente.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="11" data-value="D">
+                                    <span class="quiz-option-icon"><i class="fas fa-check-double"></i></span>
+                                    <span class="quiz-option-label">Nenhuma alteração, estou satisfeito com a rotina
+                                        atual.</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 13
+                         Tipo: Múltipla escolha (ícone + texto)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="13" data-category="Obstáculo da evolução">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">13</div>
+                            <h2 class="quiz-question-text">
+                                Qual é o obstáculo para atingir essa rotina desejada?
+                            </h2>
+                            <p class="quiz-question-hint"><!-- Dica --></p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <button class="quiz-option-card" data-question="12" data-value="A">
+                                    <span class="quiz-option-icon"><i class="fas fa-ghost"></i></span>
+                                    <span class="quiz-option-label">Implantei uma tecnologia que ficou defasada / sem
+                                        suporte.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="12" data-value="B">
+                                    <span class="quiz-option-icon"><i class="fas fa-user-plus"></i></span>
+                                    <span class="quiz-option-label">Falta funcionário qualificado para executar as
+                                        tarefas.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="12" data-value="C">
+                                    <span class="quiz-option-icon"><i class="fas fa-map-location-dot"></i></span>
+                                    <span class="quiz-option-label">Dificuldade em saber o que utilizar em minha
+                                        realidade
+                                        profissional.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="12" data-value="D">
+                                    <span class="quiz-option-icon"><i class="fas fa-thumbs-up"></i></span>
+                                    <span class="quiz-option-label">Nâo tenho obstáculos.</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 14
+                         Tipo: Múltipla escolha
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="14" data-category="Solução que enquadra">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">14</div>
+                            <h2 class="quiz-question-text">
+                                Qual solução que melhor se enquadra em sua realidade?
+                            </h2>
+                            <p class="quiz-question-hint"><!-- Dica --></p>
+                            <div class="quiz-options-grid quiz-options-grid--2col">
+                                <button class="quiz-option-card" data-question="13" data-value="A">
+                                    <span class="quiz-option-icon"><i class="fas fa-book-open"></i></span>
+                                    <span class="quiz-option-label">Um livro ou um guia orientativo me é
+                                        suficiente.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="13" data-value="B">
+                                    <span class="quiz-option-icon"><i class="fas fa-window-maximize"></i></span>
+                                    <span class="quiz-option-label">Um site profissional ou um chatbot já resolve minha
+                                        principal demanda.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="13" data-value="C">
+                                    <span class="quiz-option-icon"><i class="fas fa-shield-halved"></i></span>
+                                    <span class="quiz-option-label">Um ambiente protegido e isolado para avaliar
+                                        documentos
+                                        automaticamente.</span>
+                                </button>
+                                <button class="quiz-option-card" data-question="13" data-value="D">
+                                    <span class="quiz-option-icon"><i class="fas fa-microchip"></i></span>
+                                    <span class="quiz-option-label">Agentes inteligentes para executar tarefas
+                                        recorrentes,
+                                        sob supervisão humana.</span>
+                                </button>
+                            </div>
+                            <div class="quiz-card-nav mt-4">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ───────────────────────────────────────────
+                         PERGUNTA 15
+                         Tipo: Múltipla escolha (ícone + texto)
+                    ─────────────────────────────────────────── -->
+                    <div class="quiz-slide" data-question="15" data-category="Compartilhamento">
+                        <div class="quiz-card" data-aos="fade-up">
+                            <div class="quiz-question-number">15</div>
+                            <h2 class="quiz-question-text">
+                                Há algo mais que gostaria de compartilhar sobre sua realidade profissional ou alguma
+                                dúvida
+                                que gostaria de sanar?
+                            </h2>
+                            <p class="quiz-question-hint">
+                                Campo livre para suas considerações finais.
+                            </p>
+                            <div class="quiz-options-grid quiz-options-grid--1col">
+                                <!-- Campo de texto livre e com tamanho livre até 10 linhas para visitante escrever livremente -->
+                                <textarea class="quiz-input-text" data-question="14" rows="10"
+                                    placeholder="Digite sua mensagem aqui..."></textarea>
+                            </div>
+                            <div class="quiz-card-nav mt-4 d-flex justify-content-between align-items-center">
+                                <button class="btn-quiz-back" onclick="prevSlide()">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
+                                </button>
+                                <button class="btn-quiz-finish" id="btn-finish-quiz">
+                                    <i class="fas fa-check-double me-2"></i>Finalizar Diagnóstico
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /quiz-carousel-track -->
+            </div><!-- /quiz-carousel-wrapper -->
+
+            <!-- ───────────────────────────────────────────
+                 TELA DE RESULTADO (oculta até o fim)
+            ─────────────────────────────────────────── -->
+            <div class="quiz-result-screen" id="quiz-result-screen" aria-hidden="true">
+                <div class="quiz-result-card text-center" data-aos="zoom-in">
+
+                    <div class="quiz-result-icon mb-4">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+                    <div class="quiz-result-badge mb-3">Diagnóstico Concluído</div>
+
+                    <h2 class="quiz-result-title mb-3">
+                        Seu diagnóstico está pronto!
+                    </h2>
+
+                    <p class="quiz-result-subtitle mb-4">
+                        Com base nas suas respostas, o Rodrigo preparará uma análise
+                        personalizada do seu negócio. Clique abaixo para conversar
+                        e receber seu plano de ação.
+                    </p>
+
+                    <!-- Resumo das respostas (gerado dinamicamente) -->
+                    <div class="quiz-result-summary mb-4" id="quiz-result-summary">
+                        <!-- Preenchido pelo quiz.js -->
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="#" class="btn-quiz-cta" id="btn-email-result">
+                            <i class="fas fa-envelope me-2"></i>Enviar Diagnóstico
+                        </a>
+                        <button class="btn-quiz-restart" id="btn-restart-quiz">
+                            <i class="fas fa-rotate-left me-2"></i>Refazer diagnóstico
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         FOOTER COM PROGRESS BAR
+    ════════════════════════════════════════ -->
+    <footer class="quiz-footer" id="quiz-footer" aria-label="Progresso do quiz">
+        <div class="container">
+            <div class="quiz-progress-wrapper">
+
+                <div class="quiz-progress-info">
+                    <span class="quiz-progress-text">
+                        Pergunta <strong id="footer-current">0</strong> de <strong>14</strong>
+                    </span>
+                    <span class="quiz-progress-pct" id="footer-pct">0%</span>
+                </div>
+
+                <div class="quiz-progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="14" aria-label="Progresso do diagnóstico" id="quiz-progress-track">
+                    <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+                    <div class="quiz-progress-dots" id="quiz-progress-dots">
+                        <!-- 14 pontos gerados pelo JS -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie consent gerenciado globalmente pelo index.html via localStorage -->
+
+    <!-- ════════════════════════════════════════
+         SCRIPTS
+    ════════════════════════════════════════ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/quiz.js"></script>
+
+</body>
+
+</html>
