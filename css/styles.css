@@ -1102,3 +1102,26 @@ footer .small.text-muted {
         /* Evita overflow em telas muito pequenas */
     }
 }
+
+/* ── Utility Classes ── */
+.z-index-1 {
+    position: relative;
+    z-index: 1;
+}
+
+.opacity-05 {
+    opacity: 0.5;
+}
+
+.extra-small {
+    font-size: 0.75rem;
+}
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
+.border-opacity-25 {
+    border-color: rgba(14, 105, 115, 0.25) !important;
+}
+
