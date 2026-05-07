@@ -89,7 +89,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-                <div class="nav-brand-box bg-light p-1 rounded" style="text-align: center; color: var(--rsa-primary);">
+                <div class="nav-brand-box bg-light p-1 rounded text-center text-rsa-primary">
                     Rodrigo Aguiar
                 </div>
                 <span class="ms-2 d-none d-sm-inline slogan-text">Assessoria em Soluções Tecnológicas</span>
@@ -103,8 +103,9 @@
                     <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#diferencial">Diferencial</a></li>
                     <li class="nav-item"><a class="nav-link" href="#diy">DIY</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -268,7 +269,7 @@
                     <i class="fa-solid fa-microchip me-2 text-rsa-accent"></i>Metodologia de Alta Performance
                 </span>
                 <h2 class="display-5 fw-bold text-rsa-primary mb-3" data-aos="fade-up">O Método RSA</h2>
-                <p class="lead text-muted mx-auto" style="max-width: 700px;" data-aos="fade-up">
+                <p class="lead text-muted mx-auto max-width-700" data-aos="fade-up">
                     Uma abordagem estruturada para converter o caos operacional em ativos digitais de alto valor,
                     guiada pela soberania de dados e excelência do <strong>Stanford AI Index 2026</strong>.
                 </p>
@@ -418,7 +419,7 @@
                         </div>
 
                         <a href="https://wa.me/5547992704018?text=Olá,%20Rodrigo!%0AGostaria%20de%20saber%20mais%20sobre%20o%20Plano%20*Fluxo*%20*Ágil*."
-                            target="_blank" class="btn btn-outline-plan mt-auto">
+                            target="_blank" rel="noopener" class="btn btn-outline-plan mt-auto">
                             Quero começar agora
                         </a>
 
@@ -458,7 +459,7 @@
                         </div>
 
                         <a href="https://wa.me/5547992704018?text=Olá,%20Rodrigo!%0AGostaria%20de%20saber%20mais%20sobre%20o%20Plano%20*Assessoria*%20*RSA*."
-                            target="_blank" class="btn btn-rsa mt-auto">
+                            target="_blank" rel="noopener" class="btn btn-rsa mt-auto">
                             Quero transformar minha empresa
                         </a>
 
@@ -493,7 +494,7 @@
                         </div>
 
                         <a href="https://wa.me/5547992704018?text=Olá,%20Rodrigo!%0AGostaria%20de%20saber%20mais%20sobre%20o%20Plano%20*Parceria*%20*RSA*."
-                            target="_blank" class="btn btn-outline-plan mt-auto">
+                            target="_blank" rel="noopener" class="btn btn-outline-plan mt-auto">
                             Quero governança contínua
                         </a>
 
@@ -528,7 +529,7 @@
                         </div>
 
                         <a href="https://wa.me/5547992704018?text=Olá,%20Rodrigo!%0AGostaria%20de%20saber%20mais%20sobre%20o%20Plano%20*Enterprise*."
-                            target="_blank" class="btn btn-outline-plan mt-auto">
+                            target="_blank" rel="noopener" class="btn btn-outline-plan mt-auto">
                             Solicitar proposta
                         </a>
 
@@ -829,8 +830,8 @@
                             class="p-3 p-md-4 rounded-4 border border-dashed border-rsa-primary border-opacity-25 bg-white bg-opacity-50 shadow-sm">
                             <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4">
                                 <div class="d-flex align-items-center gap-3 text-start">
-                                    <div class="rsa-icon-box small-icon-box bg-rsa-primary bg-opacity-10 text-rsa-primary shadow-none"
-                                        style="width: 50px !important; height: 50px !important;">
+                                    <div
+                                        class="rsa-icon-box small-icon-box bg-rsa-primary-light text-rsa-primary shadow-none">
                                         <i class="fa-solid fa-robot"></i>
                                     </div>
                                     <div>
@@ -839,7 +840,7 @@
                                     </div>
                                 </div>
                                 <a href="https://chat.openai.com/?q=Resuma+os+entregáveis+desta+página+https%3A%2F%2Fwww.rsa.ia.br+Destaque+como+o+Método+RSA+pode+resolver+os+problemas+administrativos."
-                                    target="_blank"
+                                    target="_blank" rel="noopener"
                                     class="btn btn-rsa btn-sm px-4 py-2 d-flex align-items-center gap-2 shadow-sm">
                                     <i class="fa-solid fa-sparkles"></i>
                                     <span>Resumir com IA</span>
@@ -914,8 +915,12 @@
                         </div>
 
                         <div class="d-flex flex-wrap gap-3 align-items-center">
-                            <a href="https://raguiar.eng.br/" target="_blank" class="btn btn-rsa">
+                            <a href="https://raguiar.eng.br/" target="_blank" rel="noopener" class="btn btn-rsa">
                                 Veja quem sou
+                            </a>
+                            <a href="https://wa.me/5547992704018" target="_blank" rel="noopener"
+                                class="btn btn-outline-rsa">
+                                <i class="fa-brands fa-whatsapp me-2"></i>Contato
                             </a>
                         </div>
                     </div>
@@ -926,23 +931,27 @@
 
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white text-center">
+    <footer id="contato" class="py-4 bg-dark text-white text-center">
         <div class="container">
             <div class="footer__socials mb-4">
-                <a href="https://www.instagram.com/rsaguiarbr/" target="_blank" title="Instagram" class="mx-2">
+                <a href="https://www.instagram.com/rsaguiarbr/" target="_blank" rel="noopener" aria-label="Instagram"
+                    title="Instagram" class="mx-2">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://www.facebook.com/raguiar.eng/" target="_blank" title="Facebook" class="mx-2">
+                <a href="https://www.facebook.com/raguiar.eng/" target="_blank" rel="noopener" aria-label="Facebook"
+                    title="Facebook" class="mx-2">
                     <i class="fa-brands fa-square-facebook"></i>
                 </a>
-                <a href="https://linkedin.com/in/rsouzaaguiar/" target="_blank" title="LinkedIn" class="mx-2">
+                <a href="https://linkedin.com/in/rsouzaaguiar/" target="_blank" rel="noopener" aria-label="LinkedIn"
+                    title="LinkedIn" class="mx-2">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
                 <a href="https://wa.me/5547992704018?text=Olá%20Rodrigo.%20Entro%20em%20contato%20através%20do%20seu%20site."
-                    target="_blank" title="WhatsApp" class="mx-2">
+                    target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" class="mx-2">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
-                <a href="mailto:raguiar.eng@gmail.com?subject=Contato%20pelo%20site" title="E-mail" class="mx-2">
+                <a href="mailto:raguiar.eng@gmail.com?subject=Contato%20pelo%20site" aria-label="E-mail" title="E-mail"
+                    class="mx-2">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>

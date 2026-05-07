@@ -1124,4 +1124,64 @@ footer .small.text-muted {
 .border-opacity-25 {
     border-color: rgba(14, 105, 115, 0.25) !important;
 }
+
+/* ── RSA Component Enhancements ── */
+.btn-outline-rsa {
+    color: var(--rsa-primary);
+    border: 2px solid var(--rsa-primary);
+    background: transparent;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-rsa:hover {
+    background: var(--rsa-primary);
+    color: var(--rsa-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(14, 105, 115, 0.2);
+}
+
+.small-icon-box {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.2rem !important;
+    flex-shrink: 0;
+}
+
+.bg-rsa-support-light {
+    background: var(--rsa-support);
+}
+
+.text-rsa-primary {
+    color: var(--rsa-primary) !important;
+}
+
+.bg-rsa-primary {
+    background-color: var(--rsa-primary) !important;
+}
+
+.bg-rsa-primary-light {
+    background-color: rgba(14, 105, 115, 0.1) !important;
+}
+
+.bg-rsa-accent {
+    background-color: var(--rsa-accent) !important;
+}
+
+.max-width-700 {
+    max-width: 700px !important;
+}
+
+
+.max-width-600 {
+    max-width: 600px !important;
+}
+
+
 
