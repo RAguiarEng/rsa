@@ -3,5 +3,11 @@
 sync_skill.py
 update_task.py
 
+# Variáveis de ambiente
+.env
+
+# Ambiente virtual Python
+venv/
+
 # Pastas locais
 quiz/
