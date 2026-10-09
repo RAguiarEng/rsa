@@ -3,30 +3,46 @@
   <!-- URL Principal do Projeto -->
   <url>
     <loc>https://rsa.ia.br/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Hub de Publicações -->
   <url>
-    <loc>https://rsa.ia.br/parceria.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://rsa.ia.br/publicacoes.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Artigos e Notas Técnicas -->
   <url>
-    <loc>https://rsa.ia.br/quiz.html</loc>
+    <loc>https://rsa.ia.br/notes/realidade_vibecoding.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Páginas Institucionais e Ferramentas -->
+  <url>
+    <loc>https://rsa.ia.br/parceria.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
+    <loc>https://rsa.ia.br/quiz.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://rsa.ia.br/politica-de-privacidade.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
   </url>
-
 </urlset>

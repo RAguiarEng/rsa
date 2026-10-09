@@ -1,11 +1,29 @@
 # robots.txt — Método RSA
-# Estratégia: Totalmente aberto para indexação por Motores de Busca e Inteligência Artificial
+# Estratégia: Totalmente aberto para indexação por Motores de Busca e Inteligência Artificial (GEO)
 
 User-agent: *
 Allow: /
 
-# Bloquear apenas pastas administrativas (inexistentes em produção, por precaução)
-Disallow: /admin/
+# Rastreadores de IA explicitamente autorizados (ChatGPT, Claude, Perplexity, Gemini)
+User-agent: GPTBot
+Allow: /
 
-# Localização do Sitemap para acelerar a descoberta do conteúdo
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Bloqueio preventivo de diretórios administrativos e arquivos de desenvolvimento
+Disallow: /admin/
+Disallow: /venv/
+Disallow: /.git/
+
+# Localização do Sitemap XML
 Sitemap: https://rsa.ia.br/sitemap.xml

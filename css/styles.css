@@ -1184,4 +1184,274 @@ footer .small.text-muted {
 }
 
 
-
+/* ══════════════════════════════════════════════
+   PUBLICAÇÕES — pub-hero + pub-card
+   Reutiliza: .glass-card, .hero-section, tokens --rsa-*
+════════════════════════════════════════════════ */
+
+.pub-header {
+    background: #118C8C;
+    border-bottom: 2px solid #F2BB16;
+    padding: 96px 0 20px;
+}
+
+.pub-header h1 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.pub-header-sub {
+    color: #F2BB16;
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.pub-section {
+    padding: 56px 0 80px;
+}
+
+/* Largura otimizada e centralizada */
+.pub-list {
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pub-link {
+    display: block;
+    padding: 20px;
+    color: var(--rsa-text);
+    text-decoration: none;
+    transition: var(--rsa-transition);
+}
+
+.pub-link:hover {
+    color: var(--rsa-text);
+}
+
+.pub-link:focus-visible {
+    outline: 3px solid var(--rsa-accent);
+    outline-offset: 3px;
+}
+
+/* Elevação no card ao hover do link */
+article.glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(14, 105, 115, 0.15);
+}
+
+/* Topo do card: imagem à esquerda + bloco com 2 linhas (Data e Título) */
+.pub-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Miniatura ocupando as 2 linhas superiores */
+.pub-thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(14, 105, 115, 0.12);
+}
+
+/* Bloco vertical das duas primeiras linhas */
+.pub-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    min-width: 0;
+}
+
+/* Linha 1: Data */
+.pub-date {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--rsa-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Linha 2: Título */
+.pub-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--rsa-primary);
+    margin: 0;
+    transition: var(--rsa-transition);
+}
+
+.pub-link:hover .pub-title {
+    color: var(--rsa-secondary);
+}
+
+/* Linha 3: Primeira frase / resumo da publicação */
+.pub-excerpt {
+    margin: 14px 0 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--rsa-text);
+}
+
+@media (min-width: 768px) {
+    .pub-link { padding: 24px; }
+    .pub-head { gap: 18px; }
+    .pub-thumb { width: 88px; height: 88px; border-radius: 14px; }
+    .pub-title { font-size: 1.25rem; }
+    .pub-excerpt { font-size: 0.98rem; }
+}
+
+/* ══════════════════════════════════════════════
+   NOTA — Página de publicação individual
+   Reutiliza: navbar-glass, glass-card, tokens --rsa-*
+════════════════════════════════════════════════ */
+
+/* Cabeçalho minimalista da nota */
+.note-header {
+    background: var(--rsa-secondary);
+    border-bottom: 2px solid var(--rsa-accent);
+    padding: 90px 0 20px;
+}
+
+.note-back {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    transition: var(--rsa-transition);
+}
+
+.note-back:hover {
+    color: var(--rsa-accent);
+}
+
+.note-title {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: #fff;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.note-meta {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+/* Corpo do artigo */
+.note-body {
+    padding: 48px 0 80px;
+    background: var(--rsa-bg-light);
+}
+
+.note-body .container {
+    max-width: 740px;
+}
+
+.note-body p,
+.note-body li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--rsa-text);
+}
+
+.note-body h2 {
+    font-size: 1.35rem;
+    color: var(--rsa-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(14, 105, 115, 0.12);
+}
+
+.note-body a {
+    color: var(--rsa-secondary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: var(--rsa-transition);
+}
+
+.note-body a:hover {
+    color: var(--rsa-primary);
+}
+
+.note-body ul,
+.note-body ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.note-body li {
+    margin-bottom: 6px;
+}
+
+/* Figuras */
+.note-figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.note-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagem de capa — ocupa toda a largura da coluna */
+.note-figure--hero img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+}
+
+/* Imagem menor — largura contida */
+.note-figure--constrained img {
+    max-width: 360px;
+}
+
+.note-figure figcaption {
+    margin-top: 8px;
+    font-size: 0.82rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* Citação */
+.note-quote {
+    margin: 1.8rem 0;
+    padding: 20px 24px;
+    border-left: 4px solid var(--rsa-primary);
+    background: rgba(14, 105, 115, 0.05);
+    border-radius: 0 12px 12px 0;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--rsa-text);
+}
+
+/* Parágrafo de encerramento */
+.note-closing {
+    margin-top: 2.5rem;
+    padding: 16px 20px;
+    border-left: 3px solid var(--rsa-accent);
+    background: rgba(242, 187, 22, 0.06);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--rsa-primary);
+}

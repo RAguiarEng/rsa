@@ -11,3 +11,4 @@ venv/
 
 # Pastas locais
 quiz/
+.codegraphy/*
