@@ -9,13 +9,23 @@
     <title>Diagnóstico RSA | Reorganiza, Simplifica e Automatiza</title>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FB5DGWFDK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
+
+        // Mantém o consentimento negado até aplicar as preferências salvas.
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500
+        });
+
         gtag('js', new Date());
         gtag('config', 'G-6FB5DGWFDK');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FB5DGWFDK"></script>
 
     <!-- SEO & AI Optimization -->
     <meta name="robots" content="index, follow">
@@ -857,7 +867,8 @@
         </div>
     </footer>
 
-    <!-- Cookie consent gerenciado globalmente pelo index.html via localStorage -->
+    <!-- Aplica as preferências de consentimento salvas na página inicial. -->
+    <script src="js/cookies.js"></script>
 
     <!-- ════════════════════════════════════════
          SCRIPTS
